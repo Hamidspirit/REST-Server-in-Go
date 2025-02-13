@@ -5,5 +5,11 @@ Implementing REST servers in GO via different aproaches
 ## REST with std lib
 
 Server is the classic Todo app. JSON data encoding.
-This will follow Model-View-Control pattern.
+Datalayer will contain a simple in memory database and logic.
 
+task: text , tags , due
+text: string
+tags: []string
+due: time object
+
+## 
