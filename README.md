@@ -8,8 +8,19 @@ Server is the classic Todo app. JSON data encoding.
 Datalayer will contain a simple in memory database and logic.
 
 task: text , tags , due
-text: string
-tags: []string
-due: time object
+
+- **text**: string
+
+- **tags**: []string
+
+- **due**: time object
+
+> This is also good resource for servers in Go and multiplexer [mux](https://dev.to/jpoly1219/what-even-is-a-mux-4fng)
+
+## FrameWork (Gin)
+
+Frame work will help to write less code and you will enjoy the convenience.
+
+datalayer is the same, but i can see difference in handlers.
 
 ## 
