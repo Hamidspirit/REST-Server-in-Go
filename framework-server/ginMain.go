@@ -111,7 +111,12 @@ func (ts *taskServer) getTaskByDueDateHandler(c *gin.Context) {
 func main() {
 	fmt.Println("hi mom")
 
-	router := gin.Default()
+	// gin has built in middleware for logger and recovery
+	// gin.Default() alredy has this middleware
+	router := gin.New()
+	router.Use(gin.Logger())
+	router.Use(gin.Recovery())
+
 	dataserv := NewTaskServer()
 
 	router.POST("/task", dataserv.createTaskHandler)

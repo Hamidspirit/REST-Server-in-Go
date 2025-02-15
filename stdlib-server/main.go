@@ -17,6 +17,7 @@ import (
 	"time"
 
 	"something.some/datalayer"
+	"something.some/middleware"
 )
 
 type taskServer struct {
@@ -194,6 +195,9 @@ func main() {
 
 	address := "localhost:4567"
 
+	handler := middleware.Logging(mux)
+	handler = middleware.PanicRecovery(handler)
+
 	fmt.Printf("Server started on : %s", address)
-	log.Fatal(http.ListenAndServe(address, mux))
+	log.Fatal(http.ListenAndServe(address, handler))
 }
