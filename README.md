@@ -25,4 +25,10 @@ datalayer is the same, but i can see difference in handlers.
 
 i can find collection of gin middleware on [here] (https://github.com/gin-contrib/)
 
-## 
+## Auth
+
+Making a HTTPS server using TLS certificate. 
+This is just to see the implementation.
+
+TLS version 1.2
+
